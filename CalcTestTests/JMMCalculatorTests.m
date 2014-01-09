@@ -61,6 +61,13 @@
     XCTAssertEqualObjects(@6,equate);
 }
 
+- (void) testItCanSubtractTwoNumbers {
+    [calc captureOperation:SubtractionOp];
+    NSNumber *equate = [calc performOperationWith:@6
+                                              and:@2];
+    XCTAssertEqualObjects(@4, equate);
+}
+
 -(void) testItCanMultiplyTwoNumbers {
     [calc captureOperation:MultiplicationOp];
     NSNumber *result = [calc performOperationWith:@4 and:@2];

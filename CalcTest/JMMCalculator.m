@@ -65,11 +65,15 @@
     return result;
 }
 
--(NSNumber *) performOperationWith:(NSNumber *)first and:(NSNumber *)second {
+-(NSNumber *) performOperationWith:(NSNumber *)first
+                               and:(NSNumber *)second {
 	CGFloat result;
     switch (self.operation) {
         case AdditionOp:
             result = first.floatValue + second.floatValue;
+            break;
+        case SubtractionOp:
+            result = first.floatValue - second.floatValue;
             break;
         case MultiplicationOp:
             result = first.floatValue * second.floatValue;
